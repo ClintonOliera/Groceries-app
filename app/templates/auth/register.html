@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block styles %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="sign">
+            <h2>Sign up.</h2>
+        </div>
+        </div>
+        <div class="log">
+            <div class="col-sm-3">
+                or <a href="{{url_for('auth.login')}}"> &nbsp;&nbsp; <span class="login-text">Login</span></a>
+            </div>
+        </div>
+    </div>
+    <form method="POST" action="">
+        {{ register_form.csrf_token }}
+        <div class="form-group">
+        {{ register_form.f_name(class = 'form-control', placeholder = 'First Name') }}
+        
+        </div>
+        <div class="form-group">
+            {{ register_form.l_name(class = 'form-control', placeholder = 'Last Name') }}
+           
+        </div>
+        <div class="form-group">
+            {{ register_form.email(class = 'form-control', placeholder = 'Email Address') }}
+            
+        </div>
+        <div class="form-group">
+            {{ register_form.password(class = 'form-control', placeholder = 'Password') }}
+            
+        </div>
+        <div class="form-group">
+            
+            {{ register_form.confirm(class = 'form-control', placeholder = 'Confirm password') }}
+            {% for errors in register_form.errors['f_name'] %}
+                <div class="alert alert-danger mt-4">
+                    {{ errors }}
+                </div>
+            {% endfor %}
+            {% for errors in register_form.errors['l_name'] %}
+                <div class="alert alert-danger mt-4">
+                    {{ errors }}
+                </div>
+            {% endfor %}
+            {% for errors in register_form.errors['email'] %}
+                <div class="alert alert-danger mt-4">
+                    {{ errors }}
+                </div>
+            {% endfor %}
+            {% for errors in register_form.errors['password'] %}
+                <div class="alert alert-danger mt-4">
+                    {{ errors }}
+                </div>
+            {% endfor %}
+            {% for errors in register_form.errors['confirm'] %}
+                <div class="alert alert-danger mt-4">
+                    {{ errors }}
+                </div>
+            {% endfor %}
+        </div>
+        
+        <div class="form-group">
+            {{ register_form.submit(class= 'btn btn-success') }}
+        </div>
+        
+        
+    </form>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
