@@ -1,0 +1,93 @@
+ 
+{% extends 'base.html' %}
+{% block content %}
+{{block.super}}
+
+<div class="container-fluid" style="text-align:center;">
+    <p style="text-align:right; color:grey;">{{date|date:"l d-F Y"}}</p>
+
+<div class="jumbotron text-center bg-info">
+    <h1>Welcome to BuyTrend!</h1>
+    <p>"The heart of a happy and nutritrious meal!"</p> 
+</div>
+
+<!
+<div class="row">
+    {% for post in image %}
+        <div class="col-md-3">
+            <div class="card" style="width:250px;">
+                <div class="card-header bg-info text-white">
+                  <p>{{post.description}}</p>
+                </div>
+                <div class="card-body">
+                    <img src="{{ post.image.url }} " class="img-responsive" style="width:200px; height:200px;">
+                </div>
+                <div class="card-footer">
+                    <p>Kes {{post.price}}</p>
+                </div>
+            </div><br>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="jumbotron text-center bg-warning">
+        <h1>Welcome to Our Groceries!</h1>
+        <p>"The heart of a happy and nutritrious meal!"</p> 
+</div>
+
+<div class="row">
+    {% for post in product %}
+        <div class="col-md-3">
+            <div class="card" style="width:250px;">
+                <div class="card-header bg-warning text-white">
+                    <p>{{post.description}}</p>
+                </div>
+                <div class="card-body">
+                    <img src="{{post.image.url}}" class="img-responsive" style="width:200px; height:200px;">
+                </div>
+                <div class="card-footer">
+                    <p>Kes {{post.price}}</p>
+                </div>
+            </div><br>
+    </div>
+    <div class="col-md-3">
+        <div class="card" style="width:250px;">
+            <div class="card-header bg-warning text-white">
+                <p>{{post.description}}</p>
+            </div>
+            <div class="card-body">
+                <img src="{{post.image.url}}" class="img-responsive" style="width:200px; height:200px;">
+            </div>
+            <div class="card-footer">
+                <p>Kes {{post.price}}</p>
+            </div>
+        </div><br>
+</div>
+{% endfor %}
+</div>
+
+<div class="jumbotron text-center bg-danger text-white">
+        <h1>Welcome to our Groceries!</h1>
+        <p>"The heart of a happy and nutritious meal!"</p> 
+</div>
+
+<div class="row">
+    {% for post in produce %}
+        <div class="col-md-3">
+            <div class="card" style="width:250px;">
+                <div class="card-header bg-danger text-white">
+                    <p>{{post.description}}</p>
+                </div>
+                <div class="card-body">
+                    <img src="{{post.image.url}}" class="img-responsive" style="width:200px; height:200px;">
+                </div>
+                <div class="card-footer">
+                    <p>Kes {{post.price}}</p>
+                </div>
+            </div><br>
+    </div>
+{% endfor %}
+</div>
+
+</div>
+{% endblock %}
