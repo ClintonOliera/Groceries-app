@@ -7,11 +7,11 @@
     <p style="text-align:right; color:grey;">{{date|date:"l d-F Y"}}</p>
 
 <div class="jumbotron text-center bg-info">
-    <h1>Welcome to BuyTrend!</h1>
+    <h1>Welcome to Our Groceries!</h1>
     <p>"The heart of a happy and nutritrious meal!"</p> 
 </div>
 
-<!
+
 <div class="row">
     {% for post in image %}
         <div class="col-md-3">
@@ -20,7 +20,8 @@
                   <p>{{post.description}}</p>
                 </div>
                 <div class="card-body">
-                    <img src="{{ post.image.url }} " class="img-responsive" style="width:200px; height:200px;">
+                    <img class="card-img-top" src="../static/images/74587_410272305713944_1376075991_n.jpg" class="center">
+                     
                 </div>
                 <div class="card-footer">
                     <p>Kes {{post.price}}</p>
@@ -43,7 +44,8 @@
                     <p>{{post.description}}</p>
                 </div>
                 <div class="card-body">
-                    <img src="{{post.image.url}}" class="img-responsive" style="width:200px; height:200px;">
+                    <img class="card-img-top" src="../static/images/depositphotos_239282152-stock-illustration-single-opened-lychee-fruits-parted.jpg" class="center">
+                     
                 </div>
                 <div class="card-footer">
                     <p>Kes {{post.price}}</p>
@@ -56,7 +58,8 @@
                 <p>{{post.description}}</p>
             </div>
             <div class="card-body">
-                <img src="{{post.image.url}}" class="img-responsive" style="width:200px; height:200px;">
+                <img class="card-img-top" src="../static/images/unnamed.jpg" class="center">
+                     
             </div>
             <div class="card-footer">
                 <p>Kes {{post.price}}</p>
@@ -79,7 +82,9 @@
                     <p>{{post.description}}</p>
                 </div>
                 <div class="card-body">
-                    <img src="{{post.image.url}}" class="img-responsive" style="width:200px; height:200px;">
+                    
+                    <img class="card-img-top" src="../static/images/images.jpeg" class="center">
+                     
                 </div>
                 <div class="card-footer">
                     <p>Kes {{post.price}}</p>
@@ -91,3 +96,19 @@
 
 </div>
 {% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
+
+</html>
